@@ -118,10 +118,10 @@ x_t = trajectory[-1]
 ## 算法原理
 
 ### 1-Rectified Flow
-1. 从标准正态分布采样噪声 $ z_0 \sim \mathcal{N}(0, I) $
-2. 从真实数据采样 $ z_1 \sim p_{data}(x) $
-3. 线性插值：$ z_t = (1-t) \cdot z_0 + t \cdot z_1 $
-4. 学习向量场：$ v_\theta(z_t, t) = z_1 - z_0 $
+1. 从标准正态分布采样噪声 $$z_0 \sim \mathcal{N}(0, I)$$
+2. 从真实数据采样 $$z_1 \sim p_{data}(x)$$
+3. 线性插值： $$z_t = (1-t) \cdot z_0 + t \cdot z_1$$
+4. 学习向量场： $$v_\theta(z_t, t) = z_1 - z_0$$
 
 ### 2-Rectified Flow (Reflow)
 1. 使用训练好的1-RF模型生成配对数据
